@@ -1,9 +1,15 @@
-function Home (){
-    return(
-        <div>
-            <h1>Bem vindo a página inicial</h1>
-            <p>Esta é a página inicial do nosso site.</p>
-        </div>
+import styles from './home.module.css'
+import saving from '../../img/savings.svg'
+import LinkButton from '../layout/linkButton'
+
+function Home() {
+    return (
+        <section className={styles.homeContainer}>
+            <h1>Bem-vindo ao <span>Costs</span> </h1>
+            <p>Começe a gerenciar os seus projetos agora mesmo!</p>
+            <LinkButton to='NewProject' text='Criar Projeto'/>
+            <img src={saving} alt="costs" />
+        </section>
     )
 }
 
